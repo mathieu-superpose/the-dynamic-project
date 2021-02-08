@@ -4,10 +4,18 @@ $color-yellow: #cfc33a;
 $color-red: #C70625;
 $color-palered: #170000;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  color: white;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+}
 a:link, a:visited {
   text-decoration: none;
   color: $color-black;
-}
-.app {
-	font-family: Georgia, serif;
 }

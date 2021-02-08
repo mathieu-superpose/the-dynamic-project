@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import './src/Nav.scss';
+import './Nav.scss';
 
 import logo from './src/img/dynamic_logo.svg';
 
@@ -16,9 +16,6 @@ const Nav = () => {
     	<ul className='nav__list'>
         <Link to="/about">
     		<li className='nav__list__about'>About</li>
-        </Link>
-        <Link to="/jobs">
-    		<li className='nav__list__jobs'>Jobs</li>
         </Link>
     	</ul>
     </nav>
