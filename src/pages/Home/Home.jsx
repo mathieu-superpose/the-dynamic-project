@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react";
 import Form from '../../components/Form/Form';
 
 const Home = () => {
-	const [inputText, setInputText] = useState("");
+	const [inputSearch, setInputSearch] = useState("");
+  const [lastSearches, setLastSearches] = useState([]);
 
   return (
     <div>
       <Form 
-  		  inputText={inputText}
-  		  setInputText={setInputText}
+  		  inputSearch={inputSearch}
+  		  setInputSearch={setInputSearch}
+        lastSearches={lastSearches}
+        setLastSearches={setLastSearches}
   	  />
       <ul>
       <li>recherche1</li>
