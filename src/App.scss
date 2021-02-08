@@ -4,6 +4,10 @@ $color-yellow: #cfc33a;
 $color-red: #C70625;
 $color-palered: #170000;
 
+a:link, a:visited {
+  text-decoration: none;
+  color: $color-black;
+}
 .app {
 	font-family: Georgia, serif;
 }
