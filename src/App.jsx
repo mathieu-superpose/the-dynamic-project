@@ -4,7 +4,7 @@ import './App.scss';
 import Nav from './components/Nav/Nav';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Shop from './pages/Shop/Shop';
+import Jobs from './pages/Jobs/Jobs';
 
 const App = () => {
 
@@ -15,7 +15,7 @@ const App = () => {
 	      <Switch>
 	        <Route path="/" exact><Home /></Route>
 	     	<Route path="/about"><About /></Route>
-	    	<Route path="/shop"><Shop /></Route>
+	    	<Route path="/jobs"><Jobs /></Route>
 	      </Switch>
 	  </div>
     </Router>

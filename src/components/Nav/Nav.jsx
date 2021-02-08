@@ -17,8 +17,8 @@ const Nav = () => {
         <Link to="/about">
     		<li className='nav__list__about'>About</li>
         </Link>
-        <Link to="/shop">
-    		<li className='nav__list__shop'>Shop</li>
+        <Link to="/jobs">
+    		<li className='nav__list__jobs'>Jobs</li>
         </Link>
     	</ul>
     </nav>
