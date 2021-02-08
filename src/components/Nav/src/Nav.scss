@@ -1,0 +1,30 @@
+@import '../../../App.scss';
+
+.nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 10vh;
+	background-color: lightgrey;
+
+	&__dynamic-logo,
+	&__list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__dynamic-logo {
+		font-size: 30px;
+	}
+	&__list {
+		width: 30%;
+		list-style: none;
+		font-size: 20px;
+		&__about,
+		&__shop {
+
+		}
+	}
+	
+}
