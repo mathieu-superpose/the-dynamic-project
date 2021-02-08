@@ -5,7 +5,7 @@
 	justify-content: space-around;
 	align-items: center;
 	min-height: 10vh;
-	background-color: lightgrey;
+	background-color: $color-grey;
 
 	&__dynamic-logo,
 	&__list {
@@ -21,10 +21,6 @@
 		width: 30%;
 		list-style: none;
 		font-size: 20px;
-		&__about,
-		&__shop {
-
-		}
-	}
 	
+	}	
 }
