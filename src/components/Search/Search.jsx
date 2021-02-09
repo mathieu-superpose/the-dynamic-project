@@ -4,7 +4,9 @@ import './Search.scss';
 const Search = ({ text }) => {
 
 	return (
-			<li	className='search'>{text}</li>
+		<li	className='search'>
+		  <p className='search__text'>{text}</p>
+		</li>
 	);
 };
 

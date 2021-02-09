@@ -7,16 +7,21 @@
   align-items: center;
     &__input,
     &__button {
-      padding: 0.5rem;
+      padding: 0.9rem;
       font-size: 2rem;
       border: none;
       background: white;
       font-family: Georgia, serif;
     }
+    &__input {
+    border-radius: 15px 0 0 15px;
+    outline: none;
+    }
     &__button {
       color: #ff6f47;
       background: #f7fffe;
       cursor: pointer;
+      border-radius: 0 15px 15px 0;
       transition: all 0.3s ease;
     }
     &__button:hover {
