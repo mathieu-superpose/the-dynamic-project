@@ -5,14 +5,16 @@ import Nav from './components/Nav/Nav';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Jobs from './pages/Jobs/Jobs';
+import Job from './pages/Job/Job';
 
 const App = () => {
 	const [inputSearch, setInputSearch] = useState("");
   	const [lastSearches, setLastSearches] = useState([]);
+  	const [results, setResults] = useState([]);
 
   return (
     <Router>
-	  <div className="app">
+	  <div className="App">
 	    <Nav />
 	      <Switch>
 	        <Route path="/" exact>
@@ -24,7 +26,8 @@ const App = () => {
         	  />
 	        </Route>
 	     	<Route path="/about"><About /></Route>
-	    	<Route path="/jobs"><Jobs lastSearches={lastSearches}/></Route>
+	    	<Route path="/jobs"><Jobs lastSearches={lastSearches} results={results} setResults={setResults}/></Route>
+	    	<Route path="/job" exact><Job /></Route>
 	      </Switch>
 	  </div>
     </Router>

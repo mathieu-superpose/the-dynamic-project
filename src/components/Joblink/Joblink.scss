@@ -1,0 +1,10 @@
+@import '../../App.scss';
+
+.job {
+	&__card {
+	  background-color: white;
+	  border-radius: 5px;
+	  padding: 10px;
+	  margin: 10px;
+	}
+}

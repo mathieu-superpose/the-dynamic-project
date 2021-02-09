@@ -1,0 +1,10 @@
+@import '../../App.scss';
+
+.jobs {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	color: black;
+	width: 70%;
+}
