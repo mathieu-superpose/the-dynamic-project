@@ -10,8 +10,7 @@ const Form = ({ inputSearch, setInputSearch, lastSearches, setLastSearches }) =>
 
 	const submitSearchHandler = (e) => {
 		e.preventDefault();
-		setLastSearches([inputSearch, ...lastSearches]);
-		console.log(lastSearches);
+		setLastSearches([inputSearch, lastSearches[0], lastSearches[1], lastSearches[2], lastSearches[3]]);
 		setInputSearch('');
 	};
 
@@ -20,9 +19,9 @@ const Form = ({ inputSearch, setInputSearch, lastSearches, setLastSearches }) =>
 	}
 
 	return (
-		<form>
-			<input onChange={inputSearchHandler} value={inputSearch} type="text" className="todo-input" />
-			<button onClick={submitSearchHandler} className="todo-button" type="submit">
+		<form className="form">
+			<input onChange={inputSearchHandler} value={inputSearch} type="text" className="form__input" placeholder="Search a job"/>
+			<button onClick={submitSearchHandler} className="form__button" type="submit">
 				<i className="fas fa-plus-square"></i>
 			</button>
 		</form>

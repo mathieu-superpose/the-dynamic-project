@@ -1,24 +1,26 @@
 import React, { useState, useEffect } from "react";
+import './Home.scss';
 import Form from '../../components/Form/Form';
+import Search from '../../components/Search/Search';
 
 const Home = () => {
 	const [inputSearch, setInputSearch] = useState("");
   const [lastSearches, setLastSearches] = useState([]);
 
   return (
-    <div>
+    <div className='home'>
       <Form 
   		  inputSearch={inputSearch}
   		  setInputSearch={setInputSearch}
         lastSearches={lastSearches}
         setLastSearches={setLastSearches}
   	  />
-      <ul>
-      <li>recherche1</li>
-      <li>recherche2</li>
-      <li>recherche3</li>
-      <li>recherche4</li>
-      <li>recherche5</li>
+      <ul className='home__searchlist'>
+        <Search text={lastSearches[0]} />
+        <Search text={lastSearches[1]} />
+        <Search text={lastSearches[2]} />
+        <Search text={lastSearches[3]} />
+        <Search text={lastSearches[4]} />
       </ul>
     </div>
   );
