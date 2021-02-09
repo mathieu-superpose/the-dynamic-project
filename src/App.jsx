@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Jobs from './pages/Jobs/Jobs';
 import Job from './pages/Job/Job';
+import { v4 as uuidv4 } from 'uuid';
 
 const App = () => {
 	const [inputSearch, setInputSearch] = useState("");
@@ -18,7 +19,7 @@ const App = () => {
 	    <Nav />
 	      <Switch>
 	        <Route path="/" exact>
-	          <Home 
+	          <Home
 	        	inputSearch={inputSearch}
   		  		setInputSearch={setInputSearch}
         		lastSearches={lastSearches}
@@ -26,8 +27,8 @@ const App = () => {
         	  />
 	        </Route>
 	     	<Route path="/about"><About /></Route>
-	    	<Route path="/jobs"><Jobs lastSearches={lastSearches} results={results} setResults={setResults}/></Route>
-	    	<Route path="/job" exact><Job /></Route>
+	    	<Route path="/jobs" exact><Jobs lastSearches={lastSearches} results={results} setResults={setResults} key={uuidv4()}/></Route>
+	    	<Route path="/job:id"><Job /></Route>
 	      </Switch>
 	  </div>
     </Router>

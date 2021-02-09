@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Joblink from '../../components/Joblink/Joblink';
+import { Link } from 'react-router-dom';
 
 import './Jobs.scss';
 
@@ -18,7 +19,9 @@ const Jobs = ({ lastSearches, results, setResults }) => {
     <ul className='jobs'>
     	{
     	 results.map(result=>
+				 <Link to={`/job/${result.uuid}`}>
     	 <Joblink key={result.uuid} suggestion={result.suggestion} />
+			 </Link>
     	 )}
     </ul>
   );
