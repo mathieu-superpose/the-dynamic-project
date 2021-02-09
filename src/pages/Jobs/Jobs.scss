@@ -3,8 +3,9 @@
 .jobs {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	list-style: none;
 	color: black;
-	width: 70%;
+	margin: 5vh 10vw;
 }
