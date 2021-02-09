@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
+import Joblink from '../../components/Joblink/Joblink';
 
-import './src/Jobs.scss';
+import './Jobs.scss';
 
-const Jobs = ({ lastSearches }) => {
-	const [results, setResults] = useState([]);
+const Jobs = ({ lastSearches, results, setResults }) => {
 
 	useEffect(() => {
 		fetchJobs();
@@ -11,20 +11,16 @@ const Jobs = ({ lastSearches }) => {
 
 	const fetchJobs = async () => {
 		const data = await fetch(`http://api.dataatwork.org/v1/jobs/autocomplete?contains=${lastSearches[0]}`);
-		const jobs = await data.json();
-		setResults(JSON.parse(jobs));
+		setResults(await data.json());
 	};
 
   return (
-    <div>
-      <h1>Hello from Jobs</h1>
-      <ul>
-      <li>test</li>
-       {/* <li>
-          <p>{results[0]}</p>
-        </li>*/}
-      </ul>
-    </div>
+    <ul className='jobs'>
+    	{
+    	 results.map(result=>
+    	 <Joblink key={result.uuid} suggestion={result.suggestion} />
+    	 )}
+    </ul>
   );
 };
 
