@@ -14,7 +14,7 @@ const Nav = () => {
           </Link>
             </div>
     	<ul className='nav__list'>
-        <Link to="/about">
+        <Link className='nav__list__link' to="/about">
     		<li className='nav__list__about'>About</li>
         </Link>
     	</ul>

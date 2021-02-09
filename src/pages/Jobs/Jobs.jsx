@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import './src/Jobs.scss';
 
-const Jobs = () => {
+const Jobs = ({ lastSearches }) => {
 
 	useEffect(() => {
 		fetchJobs();
 	}, []);
 
 	const fetchJobs = async () => {
-		const data = await fetch('http://api.dataatwork.org/v1/jobs');
+		const data = await fetch(`http://api.dataatwork.org/v1/jobs/autocomplete?contains={lastSearches[0]}`);
 		const jobs = await data.json();
 		console.log(jobs);
 	};

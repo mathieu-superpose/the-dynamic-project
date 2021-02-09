@@ -3,10 +3,8 @@ import './Home.scss';
 import Form from '../../components/Form/Form';
 import Search from '../../components/Search/Search';
 
-const Home = () => {
-	const [inputSearch, setInputSearch] = useState("");
-  const [lastSearches, setLastSearches] = useState([]);
-
+const Home = ({ inputSearch, setInputSearch, lastSearches, setLastSearches }) => {
+	
   return (
     <div className='home'>
       <Form 

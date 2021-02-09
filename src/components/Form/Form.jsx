@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
 import './Form.scss';
 
 const Form = ({ inputSearch, setInputSearch, lastSearches, setLastSearches }) => {
@@ -20,10 +21,12 @@ const Form = ({ inputSearch, setInputSearch, lastSearches, setLastSearches }) =>
 
 	return (
 		<form className="form">
-			<input onChange={inputSearchHandler} value={inputSearch} type="text" className="form__input" placeholder="Search a job"/>
-			<button onClick={submitSearchHandler} className="form__button" type="submit">
-				<i className="fas fa-plus-square"></i>
-			</button>
+		  <input onChange={inputSearchHandler} value={inputSearch} type="text" className="form__input" placeholder="Search a job"/>
+	      <Link className="form__button__link" to="/jobs">
+	        <button onClick={submitSearchHandler} className="form__button" type="submit">
+		      <i className="fas fa-plus-square"></i>
+		    </button>
+		  </Link>
 		</form>
 	);
 };
